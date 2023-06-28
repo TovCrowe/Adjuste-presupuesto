@@ -1,13 +1,18 @@
-import React from 'react'
-import NuevoPresupuesto from './NuevoPresupuesto'
-NuevoPresupuesto
-function Header() {
+/* eslint-disable react/prop-types */
+import React from "react";
+import NuevoPresupuesto from "./NuevoPresupuesto";
+
+function Header({ presupuesto, setPresupuesto }) {
   return (
     <header>
-        <h1>Planificador de gastos</h1>
-        <NuevoPresupuesto />
+      <h1>Planificador de gastos</h1>
+
+      <NuevoPresupuesto
+        presupuesto={presupuesto}
+        setPresupuesto={setPresupuesto}
+      />
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

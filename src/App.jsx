@@ -2,10 +2,15 @@ import { useState } from 'react'
 import Header from '../components/Header'
 Header
 function App() {
-  const [count, setCount] = useState(0)
+  const [presupuesto, setPresupuesto] = useState(0)
 
   return (
-    <Header/>
+    <div>
+    <Header
+    presupuesto={presupuesto}
+    setPresupuesto={setPresupuesto}
+    />
+    </div>
   )
 }
 
