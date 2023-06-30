@@ -2,7 +2,7 @@
 import React from "react";
 import NuevoPresupuesto from "./NuevoPresupuesto";
 
-function Header({ presupuesto, setPresupuesto }) {
+function Header({ presupuesto, setPresupuesto, setIsValidPresupuesto }) {
   return (
     <header>
       <h1>Planificador de gastos</h1>
@@ -10,6 +10,7 @@ function Header({ presupuesto, setPresupuesto }) {
       <NuevoPresupuesto
         presupuesto={presupuesto}
         setPresupuesto={setPresupuesto}
+        setIsValidPresupuesto={setIsValidPresupuesto}
       />
     </header>
   );
