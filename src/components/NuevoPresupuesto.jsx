@@ -8,7 +8,7 @@ function NuevoPresupuesto({ presupuesto, setPresupuesto, setIsValidPresupuesto }
     e.preventDefault();
     if (!presupuesto || presupuesto < 0) {
       setMensaje("No es un numero");
-
+      setIsValidPresupuesto(false);
       return;
     }
 
