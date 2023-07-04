@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "./components/Header";
 import IconNewSpent from "./img/nuevo-gasto.svg";
 import Modal from "./components/Modal";
-import { generatorId } from "./components/helpers";
+import { generatorId } from "./helpers";
 import ListadoGastos from "./components/ListadoGastos";
 
 function App() {
@@ -13,6 +13,8 @@ function App() {
   const [modalAnimation, setModalAnimation] = useState(false);
 
   const [expenses, setExpenses] = useState([]);
+
+  const [expenseEdit, setExpenseEdit] = useState({});
 
   const handleNewSpent = () => {
     setModal(true);
@@ -34,8 +36,9 @@ function App() {
   };
 
   return (
-    <div>
+    <div className={modal ? "fijar" : ""}>
       <Header
+        expenses={expenses}
         presupuesto={presupuesto}
         setPresupuesto={setPresupuesto}
         setIsValidPresupuesto={setIsValidPresupuesto}
