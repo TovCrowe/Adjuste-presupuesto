@@ -3,7 +3,9 @@ import Mensaje from "./Mensaje";
 
 /* eslint-disable react/prop-types */
 function NuevoPresupuesto({ presupuesto, setPresupuesto, setIsValidPresupuesto }) {
+  
   const [mensaje, setMensaje] = useState("");
+
   const handlePresupuesto = (e) => {
     e.preventDefault();
     if (!presupuesto || presupuesto < 0) {
